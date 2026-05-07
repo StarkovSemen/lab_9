@@ -1,0 +1,14 @@
+C:\Users\semas\source\repos\TimeApp\TimeApp\bin\Debug\TimeApp.exe.config
+C:\Users\semas\source\repos\TimeApp\TimeApp\bin\Debug\TimeApp.exe
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.csproj.AssemblyReference.cache
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\MainWindow.baml
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\MainWindow.g.cs
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\App.g.cs
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp_MarkupCompile.cache
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.g.resources
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.Properties.Resources.resources
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.csproj.GenerateResource.cache
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.csproj.CoreCompileInputs.cache
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.exe
+C:\Users\semas\source\repos\TimeApp\TimeApp\obj\Debug\TimeApp.pdb
+C:\Users\semas\source\repos\TimeApp\TimeApp\bin\Debug\TimeApp.pdb

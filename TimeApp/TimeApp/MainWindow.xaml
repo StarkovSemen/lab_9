@@ -1,0 +1,105 @@
+﻿<Window x:Class="TimeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Работа со временем" Height="1000" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Ввод времени" Grid.Row="0" Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0" Margin="5" Padding="5" BorderBrush="Gray" BorderThickness="1">
+                    <StackPanel>
+                        <Label Content="Время №1" FontWeight="Bold"/>
+                        <Label Content="Часы (0-23):"/>
+                        <TextBox x:Name="txtHours1" Width="100" Margin="5"/>
+                        <Label Content="Минуты (0-59):"/>
+                        <TextBox x:Name="txtMinutes1" Width="100" Margin="5"/>
+                        <Button x:Name="btnCreate1" Content="Создать время №1" Click="BtnCreate1_Click" Margin="5" Height="30"/>
+                        <Label x:Name="lblTime1" Content="Не задано" Foreground="Blue" FontWeight="Bold" Margin="5"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" Margin="5" Padding="5" BorderBrush="Gray" BorderThickness="1">
+                    <StackPanel>
+                        <Label Content="Время №2" FontWeight="Bold"/>
+                        <Label Content="Часы (0-23):"/>
+                        <TextBox x:Name="txtHours2" Width="100" Margin="5"/>
+                        <Label Content="Минуты (0-59):"/>
+                        <TextBox x:Name="txtMinutes2" Width="100" Margin="5"/>
+                        <Button x:Name="btnCreate2" Content="Создать время №2" Click="BtnCreate2_Click" Margin="5" Height="30"/>
+                        <Label x:Name="lblTime2" Content="Не задано" Foreground="Blue" FontWeight="Bold" Margin="5"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Padding="5" BorderBrush="Gray" BorderThickness="1">
+                    <StackPanel>
+                        <Label Content="Создание из минут" FontWeight="Bold"/>
+                        <Label Content="Количество минут:"/>
+                        <TextBox x:Name="txtMinutes" Width="150" Margin="5"/>
+                        <Button x:Name="btnCreateFromMinutes" Content="Создать время из минут" Click="BtnCreateFromMinutes_Click" Margin="5" Height="30"/>
+                        <Label x:Name="lblMinutesResult" Content="" Foreground="Blue" FontWeight="Bold" Margin="5"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Операции" Grid.Row="1" Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="5">
+                    <Button x:Name="btnSubtract" Content="Вычитание (Время1 - Время2)" Click="BtnSubtract_Click" Margin="5" Height="35"/>
+                    <Button x:Name="btnInc" Content="Инкремент (Время1++)" Click="BtnInc_Click" Margin="5" Height="35"/>
+                    <Button x:Name="btnDec" Content="Декремент (Время1--)" Click="BtnDec_Click" Margin="5" Height="35"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Button x:Name="btnCompare" Content="Сравнение" Click="BtnCompare_Click" Margin="5" Height="35"/>
+                    <Button x:Name="btnToBool" Content="Приведение к bool" Click="BtnToBool_Click" Margin="5" Height="35"/>
+                    <Button x:Name="btnToInt" Content="Приведение к int (минуты)" Click="BtnToInt_Click" Margin="5" Height="35"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Конструкторы" Grid.Row="2" Margin="5">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnDefault" Content="Конструктор по умолчанию" Click="BtnDefault_Click" Margin="5" Height="35" Width="200"/>
+                <Button x:Name="btnCopy" Content="Конструктор копирования" Click="BtnCopy_Click" Margin="5" Height="35" Width="200"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Результат" Grid.Row="3" Margin="5">
+            <TextBox x:Name="txtResult" IsReadOnly="True" Height="80" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+        </GroupBox>
+
+        <Button x:Name="btnClear" Content="Очистить результаты" Click="BtnClear_Click" Grid.Row="4" Margin="5" Height="35"/>
+
+        <StatusBar Grid.Row="5" Margin="5">
+            <StatusBarItem>
+                <TextBlock x:Name="lblStatus" Text="Готов" Foreground="Green"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

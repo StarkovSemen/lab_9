@@ -94,9 +94,9 @@ namespace TimeApp
                     ClearStatus();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                AddResult($"Ошибка при создании времени №1: {ex.Message}", true);
+                AddResult($"Ошибка при создании времени №1: ", true);
             }
         }
 
@@ -112,9 +112,9 @@ namespace TimeApp
                     ClearStatus();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                AddResult($"Ошибка при создании времени №2: {ex.Message}", true);
+                AddResult($"Ошибка при создании времени №2: ", true);
             }
         }
 
@@ -139,9 +139,9 @@ namespace TimeApp
                 AddResult($"Создано время из {minutes} минут: {_tempTime}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch
             {
-                AddResult($"Ошибка при создании времени из минут: {ex.Message}", true);
+                AddResult($"Ошибка при создании времени из минут: ", true);
             }
         }
 
@@ -165,9 +165,9 @@ namespace TimeApp
                 AddResult($"Результат вычитания {_time1} - {_time2} = {result}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch
             {
-                AddResult($"Ошибка при вычитании: {ex.Message}", true);
+                AddResult($"Ошибка при вычитании: ", true);
             }
         }
 
@@ -186,9 +186,9 @@ namespace TimeApp
                 AddResult($"После инкремента: {_time1}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка при инкременте: {ex.Message}", true);
+                AddResult($"Ошибка при инкременте: ", true);
             }
         }
 
@@ -207,9 +207,9 @@ namespace TimeApp
                 AddResult($"После декремента: {_time1}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка при декременте: {ex.Message}", true);
+                AddResult($"Ошибка при декременте: ", true);
             }
         }
 
@@ -229,9 +229,9 @@ namespace TimeApp
                 AddResult($"{_time1} == {_time2}: {_time1.Equals(_time2)}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch
             {
-                AddResult($"Ошибка при сравнении: {ex.Message}", true);
+                AddResult($"Ошибка при сравнении: ", true);
             }
         }
 
@@ -249,9 +249,9 @@ namespace TimeApp
                 AddResult($"Приведение {_time1} к bool: {(result ? "true (не равно 00:00)" : "false (равно 00:00)")}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка при приведении к bool: {ex.Message}", true);
+                AddResult($"Ошибка при приведении к bool: ", true);
             }
         }
 
@@ -269,9 +269,9 @@ namespace TimeApp
                 AddResult($"Приведение {_time1} к int: {minutes} минут");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка при приведении к int: {ex.Message}", true);
+                AddResult($"Ошибка при приведении к int: ", true);
             }
         }
 
@@ -283,9 +283,9 @@ namespace TimeApp
                 AddResult($"Конструктор по умолчанию: {defaultTime}");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка: {ex.Message}", true);
+                AddResult($"Ошибка: ", true);
             }
         }
 
@@ -303,9 +303,9 @@ namespace TimeApp
                 AddResult($"Конструктор копирования: {copyTime} (копия {_time1})");
                 ClearStatus();
             }
-            catch (Exception ex)
+            catch 
             {
-                AddResult($"Ошибка при копировании: {ex.Message}", true);
+                AddResult($"Ошибка при копировании: ", true);
             }
         }
 

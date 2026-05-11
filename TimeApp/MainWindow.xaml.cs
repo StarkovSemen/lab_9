@@ -23,7 +23,7 @@ namespace TimeApp
             if (isError)
             {
                 lblStatus.Foreground = Brushes.Red;
-                lblStatus.Text = "Ошибка: " + message; 
+                lblStatus.Text = "Ошибка: "; 
             }
             else
             {
